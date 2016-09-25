@@ -1,0 +1,11 @@
+.DS_Store
+.tmp
+.git
+.idea
+mobile/node_modules
+desktop/node_modules
+.settings
+*.log
+dist/
+mobile/platforms/
+mobile/plugins/

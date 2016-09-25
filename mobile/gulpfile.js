@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var bower = require('bower');
+var browserify = require('gulp-browserify');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
@@ -8,7 +9,8 @@ var rename = require('gulp-rename');
 var sh = require('shelljs');
 
 var paths = {
-  sass: ['./scss/**/*.scss']
+  sass: ['./scss/**/*.scss'],
+  js: ['./www/js/**/*.js']
 };
 
 gulp.task('default', ['sass']);
@@ -26,7 +28,20 @@ gulp.task('sass', function(done) {
     .on('end', done);
 });
 
+
+// Basic usage
+gulp.task('scripts', function() {
+  // Single entry point to browserify
+  gulp.src('./www/js/main.js')
+    .pipe(browserify({
+      debug : true
+    }))
+    .pipe(rename('app.js'))
+    .pipe(gulp.dest('./www'))
+});
+
 gulp.task('serve:before', function() {
+  gulp.watch(paths.js, ['scripts']);
   gulp.watch(paths.sass, ['sass']);
 });
 

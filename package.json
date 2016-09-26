@@ -1,7 +1,7 @@
 {
   "scripts": {
     "setup": "cd desktop && npm install && cd .. && cd mobile && npm install && bower install",
-    "serve-desktop": "cd desktop && gulp watch",
+    "serve-web": "cd desktop && gulp watch",
     "serve-mobile": "cd mobile && ionic serve"
   },
   "name": "euvreau",
@@ -21,6 +21,6 @@
   "bugs": {
     "url": "https://github.com/eloquentix/eu-vreau/issues"
   },
-  "homepage": "https://github.com/eloquentix/eu-vreau#readme"
+  "homepage": "https://github.com/eloquentix/eu-vreau#README"
 
 }

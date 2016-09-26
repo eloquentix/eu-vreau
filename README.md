@@ -38,7 +38,7 @@
 
 ### Colaborator
 
-Pentru a deveni colaborator **EuVreau**, vă rugăm sa ne trimiteți un mail la [monica@eloquentix.com](monica@eloquentix.com).
+Pentru a deveni colaborator **EuVreau**, vă rugăm sa ne trimiteți un mail la [monica@eloquentix.com](mailto:monica@eloquentix.com).
 Ca și colaborator, politica adăugării de îmbunătățiri / repararea de probleme se face pe o ramură git separată, cu crearea ulterioară a unui pull-request(??? cerere de tragere, pffff)
 
 ### Vizitator

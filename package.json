@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "setup": "cd desktop && npm install && cd .. && cd mobile && npm install && bower install",
+    "serve-desktop": "cd desktop && gulp watch",
+    "serve-mobile": "cd mobile && ionic serve"
+  },
+  "name": "euvreau",
+  "version": "0.0.1",
+  "description": "Platformă de ajutor pentru ",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eloquentix/eu-vreau.git"
+  },
+  "keywords": [
+    "eu",
+    "vreau"
+  ],
+  "author": "Eloquentix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eloquentix/eu-vreau/issues"
+  },
+  "homepage": "https://github.com/eloquentix/eu-vreau#readme"
+
+}

@@ -1,0 +1,16 @@
+<ion-view view-title="In calitate de">
+  <ion-content>
+    <div class="card">
+      <div class="item item-text-wrap">
+        In calitate de...
+      </div>
+    </div>
+    <div class="card" ng-hide="topics.length == 0">
+      <ion-list>
+        <ion-item ng-repeat="topic in topics" ng-click="selectSubtopic(topic)">
+          {{topic.name}}
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,19 @@
+<ion-view view-title="Detalii">
+  <ion-content>
+    <div class="card">
+      <div class="item item-text-wrap">
+        <h3>{{subtopic.what}}</h3>
+      </div>
+    </div>
+    <div class="card">
+      <div class="item item-text-wrap">
+        <h3>De la: {{subtopic.where}}<h3>
+      </div>
+    </div>
+    <ion-list>
+      <ion-item ng-click="" class="item item-text-wrap" ng-repeat="item in subtopic.how">
+        {{item.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

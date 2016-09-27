@@ -1,0 +1,22 @@
+<ion-view view-title="As dori">
+  <ion-content>
+    <div class="card">
+      <div class="item item-text-wrap">
+        As dori...
+      </div>
+    </div>
+    <div class="card" ng-hide="topics.length == 0">
+      <ion-list>
+        <ion-item class="item item-text-wrap" ng-repeat="topic in topics" ng-click="subtopicDetails(topic)">
+          {{topic.what}}
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+  <div style="background-image: none; height: 64px;" class="bar bar-footer">
+    <a style="width: 100%; border-width: 0px;" class="item item-icon-left item-icon-right">
+      <i></i>
+      <i ng-click="addNew()" style="font-size: 35px; color: green;" class="icon ion-ios-plus-outline"></i>
+    </a>
+  </div>
+</ion-view>

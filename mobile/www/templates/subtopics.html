@@ -5,9 +5,9 @@
         As dori...
       </div>
     </div>
-    <div class="card" ng-hide="topics.length == 0">
+    <div class="card" ng-hide="subtopics.length == 0">
       <ion-list>
-        <ion-item class="item item-text-wrap" ng-repeat="topic in topics" ng-click="subtopicDetails(topic)">
+        <ion-item class="item item-text-wrap" ng-repeat="topic in subtopics" ng-click="subtopicDetails(topic)">
           {{topic.what}}
         </ion-item>
       </ion-list>

@@ -3,14 +3,12 @@ angular.module('euvreau.controllers.topics', ['euvreau.services.firebase'])
 .controller('TopicsController', function($scope, $rootScope, $state, $timeout,
   Firebase) {
 
-  console.log("Instance !!!");
-
   $scope.topics = [];
   var topics = Firebase.Instance().ref('topics');
 
   //TODO we want this to be behind a service to abstract Firebase away
   topics.on('child_added', function(data) {
-    console.log(data);
+    console.log(data.val());
     $scope.topics.push({
       name: data.val().name,
       id: data.key
@@ -26,8 +24,6 @@ angular.module('euvreau.controllers.topics', ['euvreau.services.firebase'])
     });
   };
 
-  console.log($scope.topics);
-
 })
 
 .controller('SubtopicsController', function($scope, $state, $rootScope,
@@ -36,7 +32,7 @@ angular.module('euvreau.controllers.topics', ['euvreau.services.firebase'])
   //TODO we want this to be behind a service to abstract Firebase away
   var topics = Firebase.Instance().ref('data/' + $stateParams.subtopicId);
   topics.on('child_added', function(data) {
-    console.log(data);
+    console.log(data.val());
     $scope.subtopics.push({
       what: data.val().what,
       where: data.val().where,
@@ -69,7 +65,7 @@ angular.module('euvreau.controllers.topics', ['euvreau.services.firebase'])
   }
 })
 
-.controller('SubtopicDetailsCtrl', function($scope, $rootScope, $timeout,
+.controller('SubtopicDetailsController', function($scope, $rootScope, $timeout,
   $stateParams, Firebase) {
   //details for $stateParams.subtopicId
 });

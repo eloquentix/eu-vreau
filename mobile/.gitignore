@@ -4,3 +4,6 @@
 node_modules/
 platforms/
 plugins/
+
+# generated erm 
+www/app.js

@@ -1,4 +1,5 @@
 require('../lib/firebase/firebase.js');
+require('./factory-firebase.js');
 require('./routes.js');
 require('./controllers.js');
 // angular.module is a global place for creating, registering and retrieving Angular modules

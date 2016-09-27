@@ -1,11 +1,9 @@
-require('../../factory-firebase.js');
-
-angular.module('euvreau.controllers.home', ['euvreau.services.firebase'])
+angular.module('euvreau.controllers.topics', ['euvreau.services.firebase'])
 
 .controller('TopicsController', function($scope, $rootScope, $state, $timeout,
   Firebase) {
 
- console.log("Instance !!!");
+  console.log("Instance !!!");
 
   $scope.topics = [];
   var topics = Firebase.Instance().ref('topics');
@@ -27,6 +25,9 @@ angular.module('euvreau.controllers.home', ['euvreau.services.firebase'])
       subtopicId: item.id
     });
   };
+
+  console.log($scope.topics);
+
 })
 
 .controller('SubtopicsController', function($scope, $state, $rootScope,

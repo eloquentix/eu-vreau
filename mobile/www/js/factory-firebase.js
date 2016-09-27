@@ -22,5 +22,4 @@ angular.module('euvreau.services.firebase', [])
       firebase.initializeApp(config);
       return firebase.database();
     }
-
   });

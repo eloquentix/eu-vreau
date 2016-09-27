@@ -1,5 +1,5 @@
-require('./home/controllers/topics.js');
+require('./topics/controllers/topics.js');
 
 angular.module('euvreau.controllers', [
-  'euvreau.controllers.home'
+  'euvreau.controllers.topics'
 ]);

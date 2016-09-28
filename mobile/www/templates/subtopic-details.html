@@ -5,7 +5,7 @@
         What
       </div>
       <div class="item item-text-wrap">
-        <h3>{{currentSubtopic.what}}</h3>
+        <h3>{{subtopicDetails.name}}</h3>
       </div>
     </div>
     <div class="card">
@@ -13,12 +13,12 @@
         Where
       </div>
       <div class="item item-text-wrap">
-        <h3>{{currentSubtopic.where}}<h3>
+        <h3>{{subtopicDetails.where}}<h3>
       </div>
     </div>
     <ion-list>
-      <ion-item ng-click="" class="item item-text-wrap" ng-repeat="item in currentSubtopic.how">
-        {{item.name}}
+      <ion-item ng-click="" class="item item-text-wrap" ng-repeat="item in subtopicDetails.how">
+        {{item}}
       </ion-item>
     </ion-list>
   </ion-content>

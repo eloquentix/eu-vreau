@@ -7,7 +7,7 @@
     </div>
     <div class="card" ng-hide="topics.length == 0">
       <ion-list>
-        <ion-item ng-repeat="topic in topics" ng-click="selectSubtopic(topic)">
+        <ion-item ng-repeat="topic in topics" ng-click="selectTopic(topic)">
           {{topic.name}}
         </ion-item>
       </ion-list>

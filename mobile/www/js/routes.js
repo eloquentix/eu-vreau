@@ -29,6 +29,16 @@ angular.module('euvreau.routes', [])
     }
   })
 
+  .state('app.subtopic-new', {
+    url: '/subtopics/new',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/subtopic-add-new.html',
+        controller: 'AddNewSubtopicController'
+      }
+    }
+  })
+
   .state('app.subtopic-details', {
     url: '/subtopics/:subtopicId/details',
     views: {

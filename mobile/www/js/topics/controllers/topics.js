@@ -17,8 +17,9 @@ angular.module('euvreau.controllers.topics', ['euvreau.services.firebase'])
       //$scope.apply();
     }, 0);
   });
-  $scope.selectSubtopic = function(item) {
+  $scope.selectTopic = function(item) {
     console.log(item);
+    $rootScope.currentTopic = item;
     $state.go('app.subtopics', {
       subtopicId: item.id
     });
@@ -44,14 +45,14 @@ angular.module('euvreau.controllers.topics', ['euvreau.services.firebase'])
   });
 
   $scope.subtopicDetails = function(item) {
-    $rootScope.subtopic = item;
+    $rootScope.currentSubtopic = item;
     $state.go('app.subtopic-details', {
       subtopicId: item.id
     });
   };
 
   $scope.addNew = function() {
-    alert("Erm, create item");
+    $state.go('app.subtopic-new');
   };
 
   function getHowList(item) {
@@ -63,6 +64,22 @@ angular.module('euvreau.controllers.topics', ['euvreau.services.firebase'])
     }
     return lst;
   }
+})
+
+.controller('AddNewSubtopicController', function($scope, $rootScope, $timeout,
+  $stateParams, Firebase) {
+  $scope.newSubtopic = {
+    name: "",
+    where: "",
+    how: ["fifi"]
+  };
+  $scope.addNewStep = function() {
+    console.log("New step");
+    $scope.newSubtopic.how.push("");
+    $timeoput(function(){
+      $scope.apply();
+    }, 10);
+  };
 })
 
 .controller('SubtopicDetailsController', function($scope, $rootScope, $timeout,

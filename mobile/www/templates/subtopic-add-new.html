@@ -1,0 +1,30 @@
+<ion-view view-title="Contribui la EuVreau">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">In calitate de</span>
+        <input style="background-color: white; font-weight: bold;" type="text" ng-disabled="true" ng-model="currentTopic.name">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">As dori</span>
+        <input type="text" ng-model="newSubtopic.name" placeholder="Innoirea permisului de conducere">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Unde</span>
+        <input type="text" ng-model="newSubtopic.where" placeholder="Institutia care rezolva problema">
+      </label>
+      <label style="border-width: 0px;" class="item item-input item-stacked-label">
+        <span class="input-label">Pasi</span>
+        <div class="list">
+          <div style="padding: 0px; border-width: 0px 0px 1px 0px;" ng-repeat="step in newSubtopic.how track by $index" class="item item-input-inset">
+            <input style="padding: 0px;" type="text" ng-model="step" placeholder="Scurta descriere pas">
+            <a ng-click="addNewStep()"
+              style="padding-right: 10px; color: green;"
+              class="button button-icon icon ion-ios-plus-outline">
+            </a>
+          </div>
+        </div>
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

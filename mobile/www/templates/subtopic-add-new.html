@@ -17,7 +17,7 @@
         <span class="input-label">Pasi</span>
         <div class="list">
           <div style="padding: 0px; border-width: 0px 0px 1px 0px;" ng-repeat="step in newSubtopic.how track by $index" class="item item-input-inset">
-            <input style="padding: 0px;" type="text" ng-model="step" placeholder="Scurta descriere pas">
+            <input style="padding: 0px;" type="text" ng-model="step" placeholder="Scurta descriere pas" ng-model-options="{ debounce: 500 }" ng-change="preserveStep(step, $index)">
             <button ng-click="addNewStep()"
                     style="padding-right: 10px; color: green; cursor: pointer; float: right;"
                     class="button button-icon icon ion-ios-plus-outline pull-right">

@@ -71,11 +71,14 @@ angular.module('euvreau.controllers.topics', ['euvreau.services.firebase'])
   $scope.newSubtopic = {
     name: "",
     where: "",
-    how: ["fifi"]
+    how: [""]
+  };
+
+  $scope.preserveStep = function(step, index) {
+    $scope.newSubtopic.how[index] = step;
   };
 
   $scope.addNewStep = function() {
-    console.log("New step");
     $scope.newSubtopic.how.push("");
     $timeout(function(){
       $scope.$apply();

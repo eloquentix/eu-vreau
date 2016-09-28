@@ -4,6 +4,7 @@ import './navbar.styl';
 
 let navbarComponent = {
   restrict: 'E',
+  replace: true,
   bindings: {},
   template,
   controller

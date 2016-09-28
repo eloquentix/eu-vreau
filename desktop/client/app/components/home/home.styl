@@ -1,2 +1,45 @@
-.home
-  color red
+.home-page
+  font-size: 1rem
+  a
+    color $linkColor !important
+    text-decoration none
+    font-family "Open Sans"
+    &:hover
+      color: #081b3f
+
+  .see-all
+    text-align right
+    a
+      font-size: 100
+      color: #1d1d1d
+      font-size: 0.8rem
+  .link
+    padding: 5px 0
+    a
+      text-decoration underline
+      transition: all .5s ease-in-out
+      font-weight: 700
+      i
+        opacity: 0
+        color: #ffffff
+        background-color: #ffffff
+        transition: all .5s ease-in-out
+        padding: 7px 6px 5px 6px
+        border-radius: 20px
+        font-size: 0.8rem
+        margin-left 5px
+      &:hover
+        text-decoration none
+        i
+          opacity: 1
+          color: #ffffff
+          background-color: #0e0d0d
+  .main-column
+    border-right 1px solid #e4e4e4
+  .inner-column
+    padding: 10px
+    border-bottom 1px solid #e4e4e4
+    h3
+      color: #6b6b6b
+      text-transform uppercase
+      font-size 0.8rem

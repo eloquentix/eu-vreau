@@ -1,0 +1,23 @@
+<div class="sidebar" layout-fill>
+
+  <div class="stats-block">
+    <p ng-repeat="stat in stats">
+      <a href="{{stat.link}}">{{stat.number}} <span>{{stat.name}}</span></a>
+    </p>
+  </div>
+
+  <div class="searches-block">
+    <h3>Cele mai populare cautari</h3>
+    <div class="link" ng-repeat="link in searches">
+      <a href="{{link.link}}">{{link.title}}</a>
+    </div>
+  </div>
+
+  <div class="latest-block">
+    <h3>Ultimele resurse adaugate</h3>
+    <div class="link" ng-repeat="link in latest">
+      <a href="{{link.link}}">{{link.title}}</a>
+    </div>
+  </div>
+
+</div>

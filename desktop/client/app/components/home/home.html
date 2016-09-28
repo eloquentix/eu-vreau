@@ -1,9 +1,13 @@
-<navbar></navbar>
-<header>
-  <hero></hero>
-</header>
-<main>
-  <div>
-    <h1>Found in {{ $ctrl.name }}.html</h1>
+<div layout="row" layout-xs="column" class="home-page columns" layout-fill>
+  <div flex="33" flex-xs="100" class="main-column" layout="column" layout-fill ng-repeat="mainColumn in columns">
+    <div class="inner-column" ng-repeat="column in mainColumn">
+      <h3>{{column.title}}</h3>
+      <div class="link" ng-repeat="link in column.links">
+        <a href="{{link.link}}">{{link.title}}<i class="fa fa-link" aria-hidden="true"></i></a>
+      </div>
+      <div class="see-all">
+        <a href="{{column.goToLink}}">Vezi toate resursele <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
   </div>
-</main>
+</div>

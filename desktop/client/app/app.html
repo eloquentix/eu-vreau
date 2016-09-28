@@ -1,4 +1,16 @@
 <!-- Place all UI elements intended to be present across all routes in this file -->
-<div class="app">
-  <div ui-view></div>
+<div layout="column">
+
+  <md-toolbar md-scroll-shrink="" class="md-tall md-primary euvreau-tall">
+    <navbar></navbar>
+  </md-toolbar>
+  <md-content style="height: 100vh; overflow-y: auto">
+    <div class="app" layout="row" layout-xs="column">
+      <div flex ui-view></div>
+      <sidebar flex-xl="20" flex-lg="25" flex-md="25" hide-xs></sidebar>
+    </div>
+  </md-content>
+
 </div>
+
+

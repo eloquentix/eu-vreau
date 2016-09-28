@@ -12,7 +12,7 @@ module.exports = {
        { test: /\.styl$/, loader: 'style!css!stylus' },
        { test: /\.css$/, loader: 'style!css' },
        { test: /\.scss$/, loader: "style!css!autoprefixer!sass" },
-       { test: /\.(png|jpg|gif)$/, loader: 'file?name=img/[name].[ext]' },
+       { test: /\.(png|jpg|gif|svg)$/, loader: 'file?name=img/[name].[ext]' },
        { test: [/fontawesome-webfont\.svg/, /fontawesome-webfont\.eot/, /fontawesome-webfont\.ttf/, /fontawesome-webfont\.woff/, /fontawesome-webfont\.woff2/],
         loader: 'file?name=fonts/[name].[ext]' }
     ]

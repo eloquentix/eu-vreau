@@ -3,7 +3,11 @@ import './app.styl';
 
 let appComponent = {
   template,
-  restrict: 'E'
+  restrict: 'E',
+  controller: (/*$scope, $element, $attrs, $timeout*/) => {
+    //"ngInject";
+
+  }
 };
 
 export default appComponent;

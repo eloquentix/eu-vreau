@@ -1,8 +1,14 @@
-<nav class="navbar">
-  <div class="logo">
-    <h1><a ui-sref="home">{{ $ctrl.name }}</a></h1>
+<div layout="column">
+  <div class="logo-container">
+
   </div>
-  <div class="nav-links">
-    <span><a ui-sref="about">about</a></span>
+  <div class="header-search" md-colors="{background: 'default-primary-500'}">
+
   </div>
-</nav>
+
+  <!--<md-nav-bar class="main-navigation" md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" flex="70">
+    <md-nav-item class="md-warn" md-nav-click="goto('page1')" name="page1">Page One</md-nav-item>
+    <md-nav-item md-nav-click="goto('page2')" name="page2">Page Two</md-nav-item>
+    <md-nav-item md-nav-click="goto('page3')" name="page3">Page Three</md-nav-item>
+  </md-nav-bar>-->
+</div>

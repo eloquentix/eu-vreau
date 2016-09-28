@@ -78,7 +78,7 @@ angular.module('euvreau.controllers.topics', ['euvreau.services.firebase'])
     console.log("New step");
     $scope.newSubtopic.how.push("");
     $timeout(function(){
-      $scope.apply();
+      $scope.$apply();
     }, 10);
   };
 })

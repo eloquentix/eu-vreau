@@ -22,5 +22,7 @@ angular.module('euvreau', ['ionic', 'euvreau.routes', 'euvreau.controllers'])
     if (window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+
   });
 });

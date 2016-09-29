@@ -40,7 +40,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./www'))
 });
 
-gulp.task('serve:before', function() {
+gulp.task('serve:before', ['scripts'], function() {
   gulp.watch(paths.js, ['scripts']);
   gulp.watch(paths.sass, ['sass']);
 });

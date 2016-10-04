@@ -9814,3 +9814,36 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+.view, .pane {
+  background: #f8fafd; }
+
+.bar.bar-stable {
+  background: #012E81;
+  color: #fff; }
+  .bar.bar-stable .title {
+    color: #fff; }
+
+.list.list-categorie a.item {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 25px;
+  padding-bottom: 25px; }
+  .list.list-categorie a.item img {
+    vertical-align: middle;
+    margin-right: 10px;
+    display: inline-block;
+    width: 35px; }
+  .list.list-categorie a.item span {
+    vertical-align: middle;
+    display: inline-block; }
+
+.item {
+  border-color: #dbe3ef; }
+
+.item-divider {
+  background: none;
+  color: #999; }
+
+.bar-stable .button.button-clear {
+  color: #fff; }

@@ -1,16 +1,31 @@
-<ion-view view-title="In calitate de">
+<ion-view view-title="">
+<ion-nav-title>
+      <!--<img src="logo.svg">-->
+      EU VREAU
+</ion-nav-title>
+
   <ion-content>
-    <div class="card">
-      <div class="item item-text-wrap">
-        In calitate de...
+    <div class="list list-categorie" ng-hide="topics.length == 0">
+      <div class="item item-divider">
+        In calitate de:
       </div>
+       <a class="item item-icon-right" ng-repeat="topic in topics" ng-click="selectTopic(topic)">
+        <img src="img/parents.svg">
+        <span>{{topic.name}}</span>
+        <i class="icon ion-chevron-right"></i>
+      </a>
     </div>
-    <div class="card" ng-hide="topics.length == 0">
+   <!-- <div class="card">
+      <div class="item item-text-wrap">
+        In calitate de.dd..
+      </div>
+    </div>-->
+   <!-- <div class="card" ng-hide="topics.length == 0">
       <ion-list>
         <ion-item ng-repeat="topic in topics" ng-click="selectTopic(topic)">
           {{topic.name}}
         </ion-item>
       </ion-list>
-    </div>
+    </div>-->
   </ion-content>
 </ion-view>
